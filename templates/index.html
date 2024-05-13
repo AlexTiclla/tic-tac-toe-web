@@ -5,11 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tic-Tac-Toe</title>
+  <script src="index.js"></script>
   <link rel="stylesheet" href="../static/style.css">
 </head>
 
 <body id="contenedor-principal">
-  
+
   <h1 id="message">Este es el juego tres en raya!!</h1>
 
   <div class="container">
@@ -24,64 +25,6 @@
     <div class="square" data-cell="8"></div>
   </div>
 
-  <div id="message"></div>
-
-
-  <script>
-    const squares = document.querySelectorAll('.square');
-    const message = document.getElementById('message');
-
-    let currentPlayer = 'X';
-
-    squares.forEach(square => {
-      square.addEventListener('click', () => {
-        if (square.textContent === '') {
-          square.textContent = currentPlayer;
-          checkWinner();
-          if (currentPlayer === 'X') {
-            currentPlayer = 'O';
-          } else {
-            currentPlayer = 'X';
-          }
-        }
-      });
-    });
-
-    function checkWinner() {
-      const winningConditions = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6]
-      ];
-
-      for (let i = 0; i < winningConditions.length; i++) {
-        const condition = winningConditions[i];
-        if (squares[condition[0]].textContent === currentPlayer &&
-          squares[condition[1]].textContent === currentPlayer &&
-          squares[condition[2]].textContent === currentPlayer) {
-          message.textContent = `¡Ganó el jugador ${currentPlayer}!`;
-          return;
-        }
-      }
-
-      let isDraw = true;
-      for (let i = 0; i < squares.length; i++) {
-        if (squares[i].textContent === '') {
-          isDraw = false;
-          break;
-        }
-      }
-
-      if (isDraw) {
-        message.textContent = '¡Empate!';
-      }
-    }
-  </script>
 </body>
 
 </html>

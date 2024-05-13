@@ -1,141 +1,35 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-gap: 2px;
-  width: 306px; /* Añadido un pequeño margen para evitar desbordamientos */
-  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+  width: 300px;
+  height: 300px;
 }
 
 .square {
-  width: 100px;
-  height: 100px;
-  border: 2px solid black;
-  font-size: 50px;
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
   cursor: pointer;
 }
 
-.square:hover {
-  background-color: #ccc;
+body#contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
-
-.playerX {
-  color: blue;
-}
-
-.playerO {
-  color: red;
-}
-
 #message {
   text-align: center;
-  font-size: 20px;
-  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
 }
-
-#contenedor-principal {
-  color: black;
-  padding: 5px;
-  font-size: 10px;
-  background-color: rgb(60, 190, 207);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-}
-
-.rectangulo {
-  padding: 5px;
-  margin: 5px;
-}
-
-.px {
-  background-color: crimson;
-  width: 200px;
-
-}
-
-.vw {
-  background-color: darkmagenta;
-  width: 20vw;
-}
-
-.em {
-  background-color: green;
-  width: 15em;
-
-}
-
-#contenedor-lista {
-  background-color: silver;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-/* 
-
-
-h2 {
-  font-family: "Jacquard 24", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  border-style: solid;
-}
-
-
-
-div {
-  background-color: crimson;
-}
-
-
-img {
-  margin: 15px;
-
-  padding: 2px;
-  width: 400px;
-  background-color: yellow;
-  border-width: 5px;
-  border-color: white;
-  border-style: solid;
-
-
-}
-
-
-#imagen-perro {
-  width: 400px;
-  border-radius: 50%;
-  border-color: black;
-  border-style: hidden;
-}
-
-a {
-  font-family: "Jersey 20 Charted", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-.bordes-redondeados {
-  border-radius: 50%;
-}
-
-
-p,
-ul,
-ol {
-  font-size: 20px;
-}
-
-li {
-  font-size: 20px;
-  color: aqua;
-}
-
-img {
-  size: 50px;
-} */
